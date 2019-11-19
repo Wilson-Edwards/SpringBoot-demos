@@ -10,7 +10,7 @@ import org.springframework.session.data.redis.config.annotation.web.http.EnableR
  * @create: 2019-11-19 15:59
  **/
 @Configuration
-//存放session到redis上的注解，最大失效时间是sessin的失效时间，单位为秒
+//存放session到redis上的注解，最大失效时间是session的失效时间，单位为秒
 @EnableRedisHttpSession(maxInactiveIntervalInSeconds = 86400 * 30)
 public class SessionConfig {
 }
