@@ -7,6 +7,7 @@ import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -35,7 +36,7 @@ class UserMapperTest {
     @Test
     public void testGetOne() throws Exception{
         //存储引擎默认从28开始自增
-        User user = userMapper.getOne((long) 29);
+        User user = userMapper.getOne((long) 65);
         Assert.assertEquals("bb", user.getName());
     }
 
@@ -48,9 +49,9 @@ class UserMapperTest {
 
     @Test
     public void testUpdate() throws Exception{
-        User user = userMapper.getOne((long) 30);
+        User user = userMapper.getOne((long) 66);
         user.setName("dd");
         userMapper.update(user);
-        Assert.assertTrue("dd".equals(userMapper.getOne((long) 30).getName()));
+        Assert.assertTrue("dd".equals(userMapper.getOne((long) 66).getName()));
     }
 }
