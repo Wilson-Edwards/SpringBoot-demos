@@ -10,4 +10,4 @@ SpringBoot的各种小demo
 |        springboot_thymeleaf        | [springboot_thymeleaf](https://github.com/lonelyProgramMonkey/SpringBoot-demos/tree/master/springboot_thymeleaf) | [springboot集成thymeleaf](https://lonelyprogrammonkey.github.io/2019/11/21/springboot集成thymeleaf/) |
 | springboot_mybatis_xml_multisource | [mybatis_xml_multisource](https://github.com/lonelyProgramMonkey/SpringBoot-demos/tree/master/springboot_mybatis_xml_multisource) | [springboot集成mybatis多数据源](https://lonelyprogrammonkey.github.io/2019/11/22/spirngboot集成mybatis多数据源/) |
 |         springboot_swagger         | [springboot_swagger](https://github.com/lonelyProgramMonkey/SpringBoot-demos/tree/master/springboot_swagger) | [springboot集成swagger](https://lonelyprogrammonkey.github.io/2019/11/22/springboot集成swagger/) |
-
+|       springboot_redis_cache       | [springboot_redis_cache]https://github.com/lonelyProgramMonkey/SpringBoot-demos/tree/master/springboot_redis_cache |                             待定                             |
