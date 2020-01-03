@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC
+        "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- mapper的namespace 对应相应接口文件的全限定符-->
+<mapper namespace="com.example.demo.dao.UserMapper">
+    <!--一般先写parameterType（参数），后写resultType（返回结果）-->
+    <insert id="saveUser" parameterType="com.example.demo.model.User">
+        INSERT INTO users (name, age)
+        VALUES (#{name}, #{age})
+    </insert>
+
+    <select id="listUser" resultType="com.example.demo.model.User">
+        SELECT*
+        FROM users
+    </select>
+
+    <select id="getUser" parameterType="Long" resultType="com.example.demo.model.User">
+        SELECT id, name, age
+        FROM users
+        WHERE id = #{id}
+    </select>
+
+    <update id="updateUser" parameterType="com.example.demo.model.User" >
+        UPDATE users
+        SET
+        <if test="name != null">name = #{name},</if>
+        <if test="age != null">age = #{age}</if>
+        WHERE
+        id = #{id}
+    </update>
+
+    <delete id="deleteUser" parameterType="Long">
+        DELETE FROM users
+        WHERE id = #{id}
+    </delete>
+
+</mapper>
